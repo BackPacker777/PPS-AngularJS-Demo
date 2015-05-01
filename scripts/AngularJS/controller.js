@@ -15,8 +15,12 @@
 	function MainCtrl($scope) {
 		$scope.staff = setStaffData();
 
+		/** @type {Boolean} */
+		$scope.showStaff = false;
+
 		$scope.filterByBuilding = function(building) {
 			$scope.filterBuilding = building;
+			$scope.showStaff = true;
 		};
 	}
 })();

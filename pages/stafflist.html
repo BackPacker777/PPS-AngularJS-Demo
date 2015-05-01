@@ -1,35 +1,26 @@
-<!DOCTYPE html>
-<!--
-AUTHOR: hbates@northmen.org
-VERSION: 1.0
-CREATED: 4.30.2015
-Project: PPS AngularJS Demo
--->
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<div class="row" data-ng-controller="StaffListCtrl">
-			<div class="small-12 columns">
-				<header class="small-centered columns" data-ng-include="'pages/staffHeader.html'"></header>
-				<div class="row small-centered columns">
-					<div class="small-3 columns"><h4>NAME</h4></div>
-					<div class="small-4 columns"><h4>JOB</h4></div>
-					<div class="small-2 columns"><h4>PHONE</h4></div>
-					<div class="small-3 columns"><h4>EMAIL</h4></div>
-				</div>
-				<div class=" pps-overflow">
-					<div class="row small-centered columns pps-font-small" data-ng-repeat="person in staff | filter:{building:filterBuilding}">
-						<div class="small-3 columns">{{ person.getLastName() }}, {{ person.getFirstName() }}</div>
-						<div class="small-4 columns">{{ person.getJob() }}  {{ person.getSubject() }}</div>
-						<div class="small-2 columns">{{ person.getPhone() }}</div>
-						<div class="small-3 columns">{{ person.getEmail() }}</div>
-					</div>
-				</div>
-				<br>
-				<br>
-			</div>
+<div class="row" data-ng-controller="StaffListCtrl">
+	<div class="small-12 small-centered columns">
+		<button class="round" id="central" ng-click="filterByBuilding('Central')">Central</button>
+		<button class="round" id="lincoln" ng-click="filterByBuilding('Lincoln')">Lincoln</button>
+		<button class="round" id="ottawa" ng-click="filterByBuilding('Ottawa')">Ottawa</button>
+		<button class="round" id="sheridan" ng-click="filterByBuilding('Sheridan')">Sheridan</button>
+		<button class="round" id="pms" ng-click="filterByBuilding('MS')">PMS</button>
+		<button class="round" id="phs" ng-click="filterByBuilding('HS')">PHS</button>
+		<button class="round" id="montessori" ng-click="filterByBuilding('Montessori')">Montessori</button>
+		<button class="round" id="spitler" ng-click="filterByBuilding('Spitler')">Spitler</button>
+	</div>
+	<div class="row small-centered columns">
+		<div class="small-3 columns"><h4>NAME</h4></div>
+		<div class="small-4 columns"><h4>JOB</h4></div>
+		<div class="small-2 columns"><h4>PHONE</h4></div>
+		<div class="small-3 columns"><h4>EMAIL</h4></div>
+	</div>
+	<div class="pps-overflow">
+		<div class="row small-centered columns pps-font-small" data-ng-repeat="person in staff | filter:{building:filterBuilding}">
+			<div class="small-3 columns">{{ person.getLastName() }}, {{ person.getFirstName() }}</div>
+			<div class="small-4 columns">{{ person.getJob() }}  {{ person.getSubject() }}</div>
+			<div class="small-2 columns">{{ person.getPhone() }}</div>
+			<div class="small-3 columns">{{ person.getEmail() }}</div>
 		</div>
-	</body>
-</html>
+	</div>
+</div>
