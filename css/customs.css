@@ -1,0 +1,78 @@
+.webDevLogo {
+	float: right;
+	/*margin-right: -2px;*/
+}
+
+.pps-font {
+	font-family: 'Vollkorn', serif;
+}
+
+.pps-font-color {
+	color: darkblue;
+}
+
+.pps-font-small {
+	font-size: 12px;
+}
+
+.pps-font-med {
+	font-size: 18px;
+}
+
+.pps-background {
+	background: url(../images/ppslogo.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.pps-overflow {
+	height: 500px;
+	overflow-y: scroll;
+}
+
+#top {
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	height: 25px;
+	margin-bottom: 0;
+}
+
+#leftMast {
+	color: white;
+}
+
+#rightMast {
+	color: white;
+}
+
+#rightMast a {
+	color: white;
+	-webkit-transition: all 0.3s ease-in; /*Safari & Chrome*/
+	transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in; /* Firefox 4 */
+	-o-transition: all 0.3s ease-in; /* Opera */
+	text-decoration:none;
+}
+
+#rightMast a:hover,
+#rightMast a:focus,
+#rightMast a:active {
+	-webkit-stroke-width: 5.3px;
+	-webkit-stroke-color: #000000;
+	-webkit-fill-color: #FFFFFF;
+	text-shadow: 1px 0px 20px #0592c2;
+	-webkit-transition: width 0.3s; /*Safari & Chrome*/
+	transition: width 0.3s;
+	-moz-transition: width 0.3s; /* Firefox 4 */
+	-o-transition: width 0.3s; /* Opera */
+}
+
+#rightMast a:visited {
+	color: white;
+}
+
+#pps-header {
+	background-color: rgba(0, 0, 0, 0.2);
+}
