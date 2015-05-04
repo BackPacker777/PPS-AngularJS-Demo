@@ -18,7 +18,8 @@
 
 		/** @type {Boolean} */
 		$scope.showStaff = false,
-		$scope.showCalendar = true;
+		$scope.showCalendar = true,
+		$scope.showPics = false;
 
 		$scope.filterByBuilding = function(building) {
 			$scope.filterBuilding = building;
