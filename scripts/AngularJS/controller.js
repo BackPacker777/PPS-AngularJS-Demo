@@ -9,11 +9,12 @@
 (function() {
 	"use strict";
 
-	angular.module('staffApp')
-		.controller('StaffListCtrl', MainCtrl);
+	angular.module('districtApp')
+		.controller('DistrictCtrl', MainCtrl);
 
 	function MainCtrl($scope) {
 		$scope.staff = setStaffData();
+		$scope.calendar = setCalendarData();
 
 		/** @type {Boolean} */
 		$scope.showStaff = false;

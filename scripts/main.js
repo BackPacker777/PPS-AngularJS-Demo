@@ -8,7 +8,7 @@
 
 "use strict";
 
-/** @type {Array}.<string> */
+/** @type {Array}.<PersonClass> */
 var staff = [];
 
 function setStaffData() {

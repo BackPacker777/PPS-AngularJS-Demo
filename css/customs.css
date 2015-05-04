@@ -159,3 +159,12 @@
 #footer {
 	margin-top: 40px;
 }
+
+#mainHeader {
+	letter-spacing: 12px;
+}
+
+#mainSubHeader {
+	letter-spacing: 8px;
+	font-style: italic;
+}

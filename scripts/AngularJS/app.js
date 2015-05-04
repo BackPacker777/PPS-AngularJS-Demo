@@ -9,5 +9,5 @@
 (function () {
 	"use strict";
 
-	angular.module('staffApp', []);
+	angular.module('districtApp', []);
 })();

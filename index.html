@@ -5,7 +5,7 @@ VERSION: 1.0
 CREATED: 4.30.2015
 Project: PPS AngularJS Demo
 -->
-<html lang="en" data-ng-app="staffApp">
+<html lang="en" data-ng-app="districtApp">
 	<head>
 		<meta charset="utf-8">
 		<title> * * PPS Demo * * </title>
@@ -16,7 +16,7 @@ Project: PPS AngularJS Demo
 		<link href="css/customs.css" rel="stylesheet">
 	</head>
 
-	<body class="pps-background pps-font">
+	<body class="pps-background pps-font" data-ng-controller="DistrictCtrl">
 		<div class="row" id="top">
 			<div class="small-6 left columns">
 				<p class="pps-font-med">231.348.2100 :: 1130 Howard Street, Petoskey, MI 49770</p>
@@ -32,8 +32,8 @@ Project: PPS AngularJS Demo
 		</div>
 		<div class="row">
 			<div class="small-12 columns text-center" id="pps-header">
-				<h1 class="pps-font-color pps-font">The Public Schools of Petoskey</h1>
-				<h6 class="pps-font-color pps-font">A Special Place for Everyone</h6>
+				<h1 class="pps-font-color pps-font" id="mainHeader">The Public Schools of Petoskey</h1>
+				<h6 class="pps-font-color pps-font" id="mainSubHeader">A Special Place for Everyone</h6>
 				<div class="row">
 					<div class="small-12 columns small-centered" id="menuFloat">
 						<ul id="titleList">
@@ -83,10 +83,15 @@ Project: PPS AngularJS Demo
 					</div>
 				</div>
 			</div>
-			<div class="row" ng-if="showStaff == true">
+			<div class="row" ng-show="true">
+				<br>
+				<br>
+				<div ng-include="'pages/calendar.html'"></div>
+			</div>
+			<!--<div class="row" ng-if="showStaff == true">
 				<div ng-include="'pages/stafflist.html'"></div>
 			</div>
-			<!--<div ng-include="'pages/stafflist.html'"></div>-->
+			<div ng-include="'pages/stafflist.html'"></div>-->
 		</div>
 
 		<footer ng-include="'pages/footer.html'"></footer>
@@ -94,6 +99,8 @@ Project: PPS AngularJS Demo
 		<!-- SCRIPTS -->
 		<script src="scripts/angular.js"></script>
 		<script src="scripts/jquery-2.1.3.min.js"></script>
+		<script src="scripts/DatesClass.js"></script>
+		<script src="scripts/loadCalendar.js"></script>
 		<script src="scripts/PersonClass.js"></script>
 		<script src="scripts/main.js"></script>
 		<script src="scripts/AngularJS/app.js"></script>
