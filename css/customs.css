@@ -28,7 +28,7 @@
 }
 
 .pps-overflow {
-	height: 20%;
+	height: 500px;
 	overflow-y: scroll;
 }
 
@@ -85,6 +85,7 @@
 
 #menuFloat {
 	height: 30px;
+	z-index: 999;
 }
 
 #titleList {
@@ -167,4 +168,8 @@
 #mainSubHeader {
 	letter-spacing: 8px;
 	font-style: italic;
+}
+
+#mainMenu {
+	margin-bottom: 30px;
 }

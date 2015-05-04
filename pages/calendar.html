@@ -1,9 +1,11 @@
 <div class="row">
-	<br>
-	<br>
+	<div class="small-12 columns text-center">
+		<h3 class="pps-font-color pps-font" id="mainSubHeader">2014/2015 Calendar</h3>
+	</div>
 	<div class="small-12 columns pps-font-small" data-ng-repeat="date in calendar">
-		<br>
-		<br>
-		<span>{{ date.getDay() }}, {{ date.getDate() }} {{ date.getEvent() }}</span>
+		<div class="small-2 columns">.</div>
+		<div class="small-2 columns left">{{ date.getDay() }}</div>
+		<div class="small-2 columns">{{ date.getDate() }}</div>
+		<div class="small-6 columns left"> {{ date.getEvent() }}</div>
 	</div>
 </div>

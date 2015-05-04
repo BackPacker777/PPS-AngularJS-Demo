@@ -34,64 +34,17 @@ Project: PPS AngularJS Demo
 			<div class="small-12 columns text-center" id="pps-header">
 				<h1 class="pps-font-color pps-font" id="mainHeader">The Public Schools of Petoskey</h1>
 				<h6 class="pps-font-color pps-font" id="mainSubHeader">A Special Place for Everyone</h6>
-				<div class="row">
-					<div class="small-12 columns small-centered" id="menuFloat">
-						<ul id="titleList">
-							<li id="schools">Schools
-								<ul>
-									<li id="central">Central Elementary</li>
-									<li id="lincoln">Lincoln Elementary</li>
-									<li id="ottawa">Ottawa Elementary</li>
-									<li id="sheridan">Sheridan Elementary</li>	
-									<li id="montessori">Montessori</li>	
-									<li id="ms">Middle School</li>
-									<li id="hs">High School</li>
-								</ul>
-							</li>
-							<li id="athletics">Athletics
-								<ul>
-									<li id="fall-sports">Fall</li>
-									<li id="winter-sports">Winter</li>
-									<li id="spring-sports">Spring</li>									
-								</ul>
-							</li>
-							<li>Band
-								<ul>
-									<li id="ms-band">Middle School</li>
-									<li id="hs-band">High School</li>
-								</ul>
-							</li>
-							<li id="administration">Administration</li>
-							<li id="staff">Staff
-								<ul>
-									<li id="central_staff" ng-click="filterByBuilding('Central')">Central Elementary</li>
-									<li id="lincoln_staff">Lincoln Elementary</li>
-									<li id="ottawa_staff">Ottawa Elementary</li>
-									<li id="sheridan_staff">Sheridan Elementary</li>
-									<li id="montessori_staff">Montessori</li>
-									<li id="ms_staff">Middle School</li>
-									<li id="hs_staff">High School</li>
-								</ul>
-							</li>
-							<li id="powerschool">PowerSchool
-								<ul>
-									<li id="student-ps">Student/Parent</li>
-									<li id="staff-ps">Staff</li>								
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
+				<div class="row" id="mainMenu" data-ng-include="'pages/mainMenu.html'"></div>
 			</div>
-			<div class="row" ng-show="true">
+			<div class="row" ng-if="showCalendar == true">
 				<br>
 				<br>
 				<div ng-include="'pages/calendar.html'"></div>
 			</div>
-			<!--<div class="row" ng-if="showStaff == true">
+			<div class="row" ng-if="showStaff == true">
 				<div ng-include="'pages/stafflist.html'"></div>
 			</div>
-			<div ng-include="'pages/stafflist.html'"></div>-->
+			<!--<div ng-include="'pages/stafflist.html'"></div>-->
 		</div>
 
 		<footer ng-include="'pages/footer.html'"></footer>

@@ -17,11 +17,13 @@
 		$scope.calendar = setCalendarData();
 
 		/** @type {Boolean} */
-		$scope.showStaff = false;
+		$scope.showStaff = false,
+		$scope.showCalendar = true;
 
 		$scope.filterByBuilding = function(building) {
 			$scope.filterBuilding = building;
 			$scope.showStaff = true;
+			$scope.showCalendar = false;
 		};
 	}
 })();
