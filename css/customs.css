@@ -4,7 +4,7 @@
 }
 
 .pps-font {
-	font-family: 'Vollkorn', serif;
+	/*font-family: 'Vollkorn', serif;*/
 }
 
 .pps-font-color {
@@ -37,18 +37,21 @@
 }
 
 #top {
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.5);
 	color: white;
 	height: 45px;
 	line-height: 45px;
+	z-index: 100;
 }
 
 #leftMast {
 	color: white;
+	z-index: 11;
 }
 
 #rightMast {
 	color: white;
+	z-index: 11;
 }
 
 .css-glow a {
@@ -78,7 +81,8 @@
 }
 
 #pps-header {
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 12;
 }
 
 #menuFloat {
@@ -160,14 +164,27 @@
 }
 
 #mainHeader {
-	letter-spacing: 12px;
+	letter-spacing: 8px;
 }
 
 #mainSubHeader {
-	letter-spacing: 8px;
+	letter-spacing: 4px;
 	font-style: italic;
 }
 
 #mainMenu {
+
+}
+
+#pps-mast {
 	margin-bottom: 30px;
+}
+
+#pps-calendar {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 6px;
+}
+
+#pps-alerts {
+	text-align: center;
 }

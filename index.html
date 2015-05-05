@@ -13,10 +13,12 @@ Project: PPS AngularJS Demo
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/foundation.css" rel="stylesheet">
+		<link href="css/slideshow.css" rel="stylesheet">
 		<link href="css/customs.css" rel="stylesheet">
 	</head>
 
 	<body class="pps-background pps-font" data-ng-controller="DistrictCtrl">
+		<div ng-include="'pages/slideshow.html'"></div>
 		<div class="row" id="top">
 			<div class="small-6 left columns">
 				<p class="pps-font-med">231.348.2100 :: 1130 Howard Street, Petoskey, MI 49770</p>
@@ -26,21 +28,24 @@ Project: PPS AngularJS Demo
 				<a href="http://www.ncmich.edu" target="_blank"><span class="fa fa-file-text fa-lg"></span></a>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="pps-mast">
 			<div class="small-12 columns text-center" id="pps-header">
 				<h1 class="pps-font-color pps-font" id="mainHeader">The Public Schools of Petoskey</h1>
 				<h6 class="pps-font-color pps-font" id="mainSubHeader">A Special Place for Everyone</h6>
 				<div class="row" id="mainMenu" data-ng-include="'pages/mainMenu.html'"></div>
 			</div>
+		</div>
+		<div class="row" data-ng-include="'pages/alerts.html'"></div>
+		<div class="row">
 			<div class="row" ng-if="showCalendar == true">
 				<div ng-include="'pages/calendar.html'"></div>
 			</div>
 			<div class="row" ng-if="showStaff == true">
 				<div ng-include="'pages/stafflist.html'"></div>
 			</div>
-			<div class="row" ng-if="showPics == true">
+			<!--<div class="row" ng-if="showPics == true">
 				<div ng-include="'pages/slideshow.html'"></div>
-			</div>
+			</div>-->
 		</div>
 
 		<footer ng-include="'pages/footer.html'"></footer>
